@@ -40,11 +40,13 @@ class Reserva {
         $("#btnRegistrar").click(() => this.Registrar());
         $("#btnBuscar").click(() => this.Buscar());
         $("#btnLista").click(() => this.Lista());
+        $("#btnEliminar").click(() => this.Eliminar());
         $("td").click(() => this.CeldasClick(event));
     }
     CeldasClick(event) {
-        //let colorCeldas = event.target;
+        
         let nro = event.target.textContent;
+        let colorCeldas = event.target;
         $("#asiento").val(nro);
     }
     Registrar(asientos) {
@@ -52,7 +54,6 @@ class Reserva {
         let nombre = document.getElementById("nombre").value;
         let apellido = document.getElementById("apellido").value;
         let dni = document.getElementById("dni").value;
-        //let colorCeldas.style.backgroundColor ="red";
         console.log(numAsiento, nombre, apellido, dni);
         let pasajeros = {
             numAsiento: numAsiento,
@@ -61,6 +62,8 @@ class Reserva {
             dni: dni
         }
         this.asientos.push(pasajeros);
+        //this.colorCeldas.style.backgroundColor = "red";
+        $("td").css("background-color", "yellow");
         this.limpiar();
     }
     Buscar() {
@@ -93,6 +96,9 @@ class Reserva {
         document.getElementById("nombre").value = " ";
         document.getElementById("apellido").value = " ";
         document.getElementById("dni").value = " ";
+    }
+    Eliminar(){
+        let marcado = $('#si:checked').val()?true:false;
     }
 }
 let IniciaVistas = new vistas();
