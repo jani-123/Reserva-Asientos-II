@@ -46,7 +46,7 @@ class Reserva {
     CeldasClick(event) {
         
         let nro = event.target.textContent;
-        let colorCeldas = event.target;
+        //let colorCeldas = event.target;
         $("#asiento").val(nro);
     }
     Registrar(asientos) {
@@ -63,7 +63,7 @@ class Reserva {
         }
         this.asientos.push(pasajeros);
         //this.colorCeldas.style.backgroundColor = "red";
-        $("td").css("background-color", "yellow");
+        //$("td").css("background-color", "yellow");
         this.limpiar();
     }
     Buscar() {
@@ -98,7 +98,7 @@ class Reserva {
         document.getElementById("dni").value = " ";
     }
     Eliminar(){
-        let marcado = $('#si:checked').val()?true:false;
+        //let marcado = $('#si:checked').val()?true:false;
     }
 }
 let IniciaVistas = new vistas();
