@@ -1,0 +1,69 @@
+body{
+    background-color: rgb(191, 198, 199);
+}
+.titulo h1{
+    text-align: center;
+    font-family: Roboto cursive;
+    width: 100%;
+    text-align: center;
+    color: black;
+    margin: 10px auto;
+    font-size: 3em;
+    text-shadow: 4px 4px white;
+}
+table{
+    border: 4px solid blue;
+    width: 80%;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    text-align: center;
+    font-family: Roboto serif;
+}
+#GrupoBoton a{
+    text-align: center;
+    color: white;
+    width: 25%;
+    font-size: 1em;
+}
+
+.contenido{
+    background-color: white;
+    height: 360px;
+    width: 100%;
+}
+#title{
+    margin-top: 27px;
+    font-family: Roboto sans-serif;
+    font-size: 2em;
+}
+#btnBuscar{
+    margin-top: 20px;
+}
+.mostrarBusqueda{
+    margin-left: 400px;
+    font-family: Roboto sans-serif;
+    font-size: 1em;
+}
+#listar H1{
+    font-family: Roboto sans-serif;
+    font-size: 2em;
+    text-align: center;
+}
+#listar button{
+    margin-left: 500px;
+}
+.listas{
+    margin-top: 10px;
+}
+#eliminar h2{
+    font-family: Roboto sans-serif;
+    font-size: 3em;
+    margin-top: 45px;
+}
+
+#btnEliminar{
+    margin-top: 70px;
+    margin-left: 440px;
+}

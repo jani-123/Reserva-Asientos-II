@@ -9,31 +9,95 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <section class="Menu principal">
+    <section class="Principal">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-md-12 col-lg-12">
-                    <h1>AEREO LANS</h1>
-                    <div class="menu">
-                        <h3>Menu Principal</h3>
-                        <p>1: Reservar Asiento</p>
-                        <p>2: Liberar Asiento</p>
-                        <p>3: Busqueda por D.N.I</p>
-                        <p>4: Lista de Pasajeros</p>
-                        <input type="number" maxlength="1" name="opcion" id="opcion" required />
-                        <button class="btn btn-lg btn-success" id="enviar">Enviar</button>
+                <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12 titulo">
+                    <h1>AERO LANS</h1>
+                    <hr>
+                </div>
+                <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12">
+                    <table class="tablero">
+                        <tr>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>6</td>
+                            <td>8</td>
+                            <td>10</td>
+                            <td>12</td>
+                            <td>14</td>
+                            <td>16</td>
+                            <td>18</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td>7</td>
+                            <td>9</td>
+                            <td>11</td>
+                            <td>13</td>
+                            <td>15</td>
+                            <td>17</td>
+                            <td>19</td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12 btn-group" role="group" aria-label="..." id="GrupoBoton">
+                    <a class="btn btn-sm btn-group-justified reservar" href="javascript:void('reserva');" role="button" style="background-color: #6EABE4;">Reservar Asiento</a>
+                    <a class="btn btn-sm btn-group-justified buscar" href="javascript:void('busca');" role="button" style="background-color: #A39B9B">Buscar Asiento</a>
+                    <a class="btn btn-sm btn-group-justified listar" href="javascript:void('lista');" role="button" style="background-color: #B1E2A1;">Listar Asientos</a>
+                    <a class="btn btn-sm btn-group-justified eliminar" href="javascript:void('liberar');" role="button" style="background-color: #17DBCB;">Liberar Asientos</a>
+                </div>
+                <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12 contenido" id="contenido">
+                    <form id="formulario">
+                        <div class="form-group">
+                            <label for="numero">Numero de Asiento:</label>
+                            <input type="number" class="form-control" id="asiento" placeholder="Seleccione Asiento" disabled="disabled"></div>
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre"></div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" class="form-control" id="apellido"></div>
+                        <div class="form-group">
+                            <label for="dni">D.n.i:</label>
+                            <input type="number" class="form-control" id="dni"></div>
+                        <button class="btn btn-success" id="btnRegistrar">Registrar</button>
+                    </form>
+                    <div id="buscar">
+                        <label for="numero" id="title">Ingrese D.N.I:</label>
+                        <input type="number" class="form-control" id="Dni">
+                        <button class="btn btn-success" id="btnBuscar">Buscar</button>
+                        <div class="mostrarBusqueda">
+                        </div>
+                    </div>
+                    <div id="listar">
+                        <H1>Lista de Pasajeros</H1>
+                        <button class="btn btn-success" id="btnLista">Obtener Lista</button>
+                        <div class="listas"></div>
+                    </div>
+                    <div id="eliminar">
+                        <h2>Seleccione el numero de asiento que desea liberar</h2>
+                        <input type="number" class="form-control" id="numAsiento">
+                        <label class="checkbox-inline"><input type="checkbox" value="" id="si">Si</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="" id="no">No</label>
+                        <button class="btn btn-success" id="btnEliminar">Eliminar</button>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+    <script src="assets/js/poo-clases.js"></script>
 </body>
 
 </html>
